@@ -8,9 +8,9 @@ app.use(morgan('combined'))
 app.use(bodyParser.json())
 app.use(cors())
 
-app.get('/start', (req,res) => {
+app.post('/register', (req,res) => {
     res.send({
-        message: 'hello world'
+        message: `Hello ${req.body.email}! your connected with My Team.... `
     })
 })
 
